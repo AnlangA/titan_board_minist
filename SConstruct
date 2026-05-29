@@ -16,7 +16,7 @@ except Exception as e:
     print(RTT_ROOT)
     sys.exit(-1)
 
-TARGET = 'rtthread.' + rtconfig.TARGET_EXT
+TARGET = 'build/target/rtthread.' + rtconfig.TARGET_EXT
 
 DefaultEnvironment(tools=[])
 env = Environment(tools = ['mingw'],
@@ -50,7 +50,7 @@ rtconfig.BSP_LIBRARY_TYPE = None
 objs = PrepareBuilding(env, RTT_ROOT, has_libcpu=False)
 
 # include drivers
-objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers', 'SConscript')))
+objs.extend(SConscript(os.path.join(libraries_path_prefix, 'HAL_Drivers', 'SConscript'), variant_dir='build/libraries/HAL_Drivers', duplicate=0))
 
 # make a building
 DoBuilding(TARGET, objs)

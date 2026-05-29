@@ -599,7 +599,6 @@ menu "Hardware Drivers Config"
             select RT_USING_PIN
             default n
             if BSP_USING_SOFT_I2C
-                config BSP_USING_SOFT_I2C
                 menuconfig BSP_USING_I2C1
                     bool "Enable I2C1 Bus (software simulation)"
                     default n
