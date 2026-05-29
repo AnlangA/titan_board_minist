@@ -20,7 +20,5 @@
 /.secure_rzone
 /.secure_xml
 /ra_cfg.txt
-/packages/pkgs.json
-/packages/pkgs_error.json
+/__pycache__
 .sconsign.dblite
-__pycache__/rtconfig.cpython-314.pyc
