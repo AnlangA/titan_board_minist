@@ -22,3 +22,5 @@
 /ra_cfg.txt
 /packages/pkgs.json
 /packages/pkgs_error.json
+.sconsign.dblite
+__pycache__/rtconfig.cpython-314.pyc
